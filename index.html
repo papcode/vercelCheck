@@ -4,6 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ElevenLabs Widget Test</title>
+  
+  <!-- CSS to hide ElevenLabs branding -->
+  <style>
+    /* Hide the "Powered by ElevenLabs" text and link */
+    elevenlabs-convai p:has(span:contains("Powered by ElevenLabs")),
+    elevenlabs-convai p:has(a[href*="elevenlabs.io"]) {
+      display: none !important;
+    }
+    
+    /* Alternative approach - hide by text content */
+    elevenlabs-convai p {
+      display: none !important;
+    }
+    
+    /* More specific targeting of the branding container */
+    elevenlabs-convai div[class*="overlay"] p {
+      display: none !important;
+    }
+    
+    /* Target the specific classes from your HTML */
+    elevenlabs-convai .whitespace-nowrap {
+      display: none !important;
+    }
+  </style>
 </head>
 <body>
   <h1>Welcome to My Widget Test Page</h1>
